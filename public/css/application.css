@@ -1,9 +1,47 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+.racer_table td {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px dotted gray;
+  border-left: 1px dotted gray;
+
 }
-th {
-  text-align: left;
+
+.racer_table #player1_strip td.active {
+  /*background-color: black;*/
+  background-image:url('http://i1.minus.com/iscUIyujMgx1o.png');
+   background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: 100%;
+}
+
+.racer_table #player2_strip td.active {
+  /*background-color: red;*/
+  background-image:url('http://i2.minus.com/irLyxSFWKM4Vq.png');
+   background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: 100%;
+
+}
+
+.finish {
+  background-color: red;
+}
+
+.container {
+  width:95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.red{
+  background-color: red !important;
+}
+
+.form_list  {
+  list-style: none;
 }

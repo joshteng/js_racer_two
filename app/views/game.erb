@@ -1,0 +1,47 @@
+<div class="container">
+<center>
+<h1><img src="http://i2.minus.com/i5UkeOmWoCMvX.png"></h1>
+<p><img src="http://i1.minus.com/iscUIyujMgx1o.png" width="30">&nbsp;player 1 <%= @player1.name %> tap z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://i2.minus.com/irLyxSFWKM4Vq.png" width="30">&nbsp;player 2 <%= @player2.name %> tap m</p>
+
+
+<% if @game.time_played_in_seconds == nil %>
+
+
+<table class="racer_table">
+  <tr id="player1_strip">
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+    <td></td><td></td><td></td><td></td><td></td><td class="finish"></td>
+  </tr>
+  <tr id="player2_strip">
+   
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+    <td></td><td></td><td></td><td></td><td></td><td></td>
+  </tr>
+</table>
+
+<% else %>
+
+<%= @game.winner.name %> won this game in <%= @game.time_played_in_seconds %> miliseconds.
+
+<% end %>
+
+
+<center><p id="game_state"></p></center>
+<img src="http://i2.minus.com/i7T3YATMRZNYT.jpg">
+</center>
+</div>
+
+
+
+
+<script>
+  var game_id = <%= @game.id %>;
+  var player1_id = <%= @player1.id %>;
+  var player2_id = <%= @player2.id %>;
+  var player1_name = <%= @player1.name %>;
+  var player2_name = <%= @player2.name %>;
+</script>
